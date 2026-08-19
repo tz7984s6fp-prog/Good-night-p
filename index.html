@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Night Princess 💗</title>
+<style>
+body{margin:0;min-height:100vh;padding:20px;display:flex;justify-content:center;align-items:center;background:radial-gradient(circle at top,#5b1747,#170713 65%);font-family:Arial;color:white}
+.card{width:min(950px,100%);padding:22px;border-radius:25px;background:rgba(255,255,255,.08);border:1px solid rgba(255,150,210,.3);box-shadow:0 20px 70px rgba(0,0,0,.55)}
+h1{text-align:center;color:#ff9dcc}
+pre{padding:20px;border-radius:16px;background:#080808;color:#f8f8f8;overflow:auto;white-space:pre-wrap;line-height:1.5;font-size:14px}
+button{display:block;margin:18px auto;padding:13px 28px;border:0;border-radius:14px;background:#ff69b4;color:white;font-size:16px;font-weight:bold}
+#msg{text-align:center;color:#ffb6d9;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>💗 Good Night Princess 👑</h1>
+<pre id="code">import turtle
+
+screen = turtle.Screen()
+screen.bgcolor("black")
+screen.title("Good Night Princess")
+screen.setup(width=800, height=800)
+
+t = turtle.Turtle()
+t.speed(0)
+t.hideturtle()
+
+# Pink heart
+t.penup()
+t.goto(0, -260)
+t.setheading(140)
+t.pendown()
+t.color("#ff69b4")
+t.fillcolor("#ff69b4")
+
+t.begin_fill()
+t.forward(240)
+t.circle(-120, 200)
+t.left(120)
+t.circle(-120, 200)
+t.forward(240)
+t.end_fill()
+
+# Text
+t.penup()
+t.goto(0, -15)
+t.color("white")
+t.write("good night", align="center",
+        font=("Arial", 32, "bold"))
+
+t.goto(0, -70)
+t.write("princess", align="center",
+        font=("Arial", 34, "bold"))
+
+# Hearts
+t.goto(-170, 55)
+t.color("#ff1493")
+t.write("♥", align="center", font=("Arial", 28, "bold"))
+
+t.goto(170, 55)
+t.write("♥", align="center", font=("Arial", 28, "bold"))
+
+# Crown
+t.goto(0, 180)
+t.color("#ffd700")
+t.write("♕", align="center", font=("Arial", 45, "bold"))
+
+turtle.done()</pre>
+<button onclick="copyCode()">📋 Copy Python Code</button>
+<div id="msg"></div>
+</div>
+<script>
+function copyCode(){
+ const code=document.getElementById("code").innerText;
+ navigator.clipboard.writeText(code).then(()=>{
+  document.getElementById("msg").innerText="✅ کۆدەکە کۆپی کرا!";
+ });
+}
+</script>
+</body>
+</html>
